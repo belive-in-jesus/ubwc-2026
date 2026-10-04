@@ -1,1 +1,25 @@
-
+{
+  "season": 2026,
+  "maxPlayersPerTeam": 15,
+  "battlesPerTournament": 3,
+  "battleDurationMinutes": 90,
+  "breakMinutes": [
+    5,
+    10
+  ],
+  "ranking": {
+    "primary": "placement",
+    "secondary": "lichessScore",
+    "finalTieBreak": "lichessRandom"
+  },
+  "qualification": {
+    "firstQualifierAdvances": 20,
+    "quarterfinalsAdvances": 15,
+    "semifinalsAdvances": 10
+  },
+  "individual": {
+    "scoreSource": "officialLichessFinalScore",
+    "oneAccountPerPlayer": true,
+    "teamPlacementRelevant": false
+  }
+}
