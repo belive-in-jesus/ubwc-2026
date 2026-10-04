@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Organizer Tools — UBWC 2026</title><link rel="stylesheet" href="css/style.css"></head>
+<body><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span>UBWC</span><small>2026</small></a><button class="nav-toggle">☰</button><nav><a href="index.html">Home</a><a href="schedule.html">Schedule</a><a href="standings.html">Standings</a><a href="teams.html">Teams</a><a href="players.html">Players</a><a href="rules.html">Rules</a></nav></div></header>
+<main><section class="page-hero"><div class="container"><p class="eyebrow">ORGANIZER TOOLS · V2</p><h1>Tournament engine.</h1><p>Technical overview of the data currently loaded by the public site.</p></div></section>
+<section class="section"><div class="container card-grid" id="stats"></div></section>
+<section class="section dark-section"><div class="container"><div class="section-heading"><div><p class="eyebrow">DATA PIPELINE</p><h2>Ready for Lichess imports.</h2></div></div><div class="notice"><strong>Next step</strong><span>Replace the example JSON input with a secure Lichess import service. Never store API tokens in this public repository.</span></div><pre id="debug" class="debug"></pre></div></section></main>
+<footer><div class="container footer-wrap"><div><strong>UBWC 2026</strong><span>Organizer area — V2</span></div><span>Not an authentication system yet.</span></div></footer>
+<script src="js/app.js"></script><script src="js/engine.js"></script><script>
+loadUBWCData().then(()=>{const d=window.UBWC_DATA,c=window.UBWC_CONFIG;
+document.getElementById("stats").innerHTML=[
+["TEAMS",d.teams.length,"Loaded team records"],["PLAYERS",d.players.length,"Loaded player records"],
+["BATTLES",d.results.battles.length,"Imported battle results"],["ROSTER LIMIT",c.maxPlayersPerTeam,"Players per team"]
+].map(x=>`<article class="team-card"><div class="rank">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p></article>`).join("");
+document.getElementById("debug").textContent=JSON.stringify({config:c,teams:d.teams,players:d.players,importedBattles:d.results.battles.length},null,2);});
+</script></body></html>

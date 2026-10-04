@@ -31,3 +31,29 @@ Do not put API tokens, passwords or private organizer credentials into this repo
 - qualification status
 - live battle status
 - automated result validation
+
+## V2 tournament engine
+
+`js/engine.js` now processes the JSON data layer.
+
+`data/results.json` accepts battles such as:
+
+```json
+{
+  "id": "qualifier-b1",
+  "stage": "First Qualifier",
+  "date": "2026-10-11",
+  "scores": [
+    {
+      "playerId": "player-id",
+      "account": "lichess_username",
+      "teamId": "team-id",
+      "score": 123
+    }
+  ]
+}
+```
+
+The score must be the final score reported by Lichess for that account in that tournament.
+
+V2 is still a client-side/static calculation engine. It is **not yet the official Lichess API integration** and does not authenticate organizers. The next version should use a secure server-side/API layer. Never put API tokens, passwords, or other secrets in this public repository.
