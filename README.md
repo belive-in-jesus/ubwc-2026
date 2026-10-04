@@ -8,6 +8,8 @@ No build system is required. Open `index.html` in a browser, or use a local stat
 
 ## GitHub Pages
 
+This corrected V2 is designed to be published from the repository root. `index.html` is the entry point and all CSS/JS/data paths are explicitly relative.
+
 1. Create a GitHub repository, e.g. `ubwc-2026`.
 2. Upload the contents of this folder to the repository root.
 3. Go to **Settings → Pages**.
