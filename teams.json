@@ -1,0 +1,18 @@
+{
+  "teams": [
+    {
+      "id": "demo-alpha",
+      "name": "Demo Alpha",
+      "lichessTeam": null,
+      "status": "example",
+      "players": []
+    },
+    {
+      "id": "demo-beta",
+      "name": "Demo Beta",
+      "lichessTeam": null,
+      "status": "example",
+      "players": []
+    }
+  ]
+}
