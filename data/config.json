@@ -1,25 +1,33 @@
 {
-  "season": 2026,
-  "maxPlayersPerTeam": 15,
-  "battlesPerTournament": 3,
-  "battleDurationMinutes": 90,
-  "breakMinutes": [
-    5,
-    10
-  ],
-  "ranking": {
-    "primary": "placement",
-    "secondary": "lichessScore",
-    "finalTieBreak": "lichessRandom"
+  "event": {
+    "name": "UBWC 2026",
+    "fullName": "UltraBullet World Championship",
+    "status": "preparation",
+    "statusLabel": "Preparation Phase",
+    "description": "An international UltraBullet championship is currently being prepared. Official tournament dates, registration and qualification details will be announced once preparations are complete."
   },
-  "qualification": {
-    "firstQualifierAdvances": 20,
-    "quarterfinalsAdvances": 15,
-    "semifinalsAdvances": 10
+  "visibility": {
+    "registrationOpen": false,
+    "schedulePublished": false,
+    "qualifiersPublished": false,
+    "playersPublished": false,
+    "standingsVisible": false,
+    "resultsVisible": false,
+    "finalPublished": false,
+    "countdownEnabled": false
   },
-  "individual": {
-    "scoreSource": "officialLichessFinalScore",
-    "oneAccountPerPlayer": true,
-    "teamPlacementRelevant": false
+  "links": {
+    "registration": "",
+    "lichess": "",
+    "contact": ""
+  },
+  "messages": {
+    "registration": "Registration will open once the official event schedule has been published.",
+    "schedule": "The official tournament schedule has not been published yet.",
+    "qualifiers": "Qualifier information will appear here once the qualification stage is announced.",
+    "players": "The participant list will be published after registration opens.",
+    "standings": "Live standings will become available when the competition starts.",
+    "results": "Results will be published during the competition.",
+    "final": "The final stage is currently being prepared."
   }
 }
