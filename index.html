@@ -3,98 +3,114 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UBWC 2026 — UltraBullet World Championship. Official event information, rules and tournament updates.">
   <title>UBWC 2026 — UltraBullet World Championship</title>
-  <meta name="description" content="Official website of the UltraBullet World Championship 2026.">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="./index.html"><span>UBWC</span><small>2026</small></a>
-      <button class="nav-toggle" aria-label="Open navigation">☰</button>
-      <nav>
-        <a class="active" href="./index.html">Home</a>
-        <a href="./schedule.html">Schedule</a>
-        <a href="./standings.html">Standings</a>
-        <a href="./teams.html">Teams</a>
-        <a href="./players.html">Players</a>
-        <a href="./rules.html">Rules</a>
-      </nav>
-    </div>
+    <nav class="nav container">
+      <a class="brand" href="#top" aria-label="UBWC home">
+        <span class="brand-mark">UB</span>
+        <span>UBWC <small>2026</small></span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div id="nav-links" class="nav-links">
+        <a href="#about">About</a>
+        <a href="#format">Format</a>
+        <a href="#rules">Rules</a>
+        <a href="#event">Event</a>
+      </div>
+    </nav>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
-      <div class="container hero-grid">
+      <div class="hero-grid container">
         <div>
-          <p class="eyebrow">OFFICIAL ULTRABULLET WORLD CHAMPIONSHIP</p>
-          <h1>The world's fastest<br><span>team chess championship.</span></h1>
-          <p class="hero-copy">Three qualification stages. Ten finalists. Three days of finals. One UBWC Team World Champion.</p>
+          <div class="eyebrow"><span class="status-dot"></span><span id="status-label">Preparation Phase</span></div>
+          <h1>UltraBullet<br><em>World Championship</em></h1>
+          <p class="hero-copy" id="hero-description">
+            An international UltraBullet championship is currently being prepared.
+          </p>
           <div class="hero-actions">
-            <a class="button primary" href="./schedule.html">View schedule</a>
-            <a class="button ghost" href="./rules.html">Read rules</a>
+            <a class="button primary" href="#event">Event status</a>
+            <a class="button secondary" href="#rules">Read the rules</a>
           </div>
         </div>
-        <div class="hero-card">
-          <div class="card-label">NEXT EVENT</div>
-          <div class="date-big">11 OCT</div>
-          <div class="event-name">First Qualifier</div>
-          <div class="event-meta">Open to all teams · 3 × 90 min</div>
-          <div class="countdown" id="countdown">
-            <div><strong>—</strong><span>DAYS</span></div>
-            <div><strong>—</strong><span>HOURS</span></div>
-            <div><strong>—</strong><span>MIN</span></div>
-            <div><strong>—</strong><span>SEC</span></div>
+        <aside class="hero-card">
+          <span class="card-label">UBWC 2026</span>
+          <strong>Official information hub</strong>
+          <p>No official tournament dates have been published yet.</p>
+          <span class="tba">DATES · TBA</span>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-heading">
+        <span>01</span><h2>About the UBWC</h2>
+      </div>
+      <div class="two-col">
+        <p>The UBWC is designed as a competitive UltraBullet championship built around qualification stages and a final championship event.</p>
+        <p>The website is already prepared for the complete event workflow. Public details will be activated only when they are officially confirmed.</p>
+      </div>
+    </section>
+
+    <section id="format" class="section muted">
+      <div class="container">
+        <div class="section-heading"><span>02</span><h2>Competition format</h2></div>
+        <div class="cards">
+          <article class="info-card"><b>01</b><h3>Qualifiers</h3><p>Qualification tournaments will determine who advances to the championship stage.</p></article>
+          <article class="info-card"><b>02</b><h3>Championship</h3><p>The qualified field will compete in the main UBWC competition.</p></article>
+          <article class="info-card"><b>03</b><h3>Final</h3><p>The final stage will decide the UBWC 2026 champion.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="rules" class="section container">
+      <div class="section-heading"><span>03</span><h2>Quick rules</h2></div>
+      <div class="rules-grid">
+        <div><strong>UltraBullet</strong><p>Games are played at an UltraBullet time control. The exact tournament settings will be announced with the official schedule.</p></div>
+        <div><strong>Fair play</strong><p>All participants are expected to follow the rules of the tournament platform and compete fairly.</p></div>
+        <div><strong>Qualification</strong><p>Only officially announced qualification events count toward advancement.</p></div>
+        <div><strong>Official updates</strong><p>Dates, registration instructions and tournament links published on this website are the authoritative event information.</p></div>
+      </div>
+    </section>
+
+    <section id="event" class="section dark">
+      <div class="container">
+        <div class="section-heading light"><span>04</span><h2>Event status</h2></div>
+        <div class="status-panel">
+          <div>
+            <span class="status-badge" id="status-badge">PREPARATION PHASE</span>
+            <h3 id="status-title">The UBWC is currently being prepared.</h3>
+            <p id="status-text">Official dates, registration and qualification details will be announced once preparations are complete.</p>
+          </div>
+          <div class="status-list">
+            <div><span>Registration</span><b id="registration-state">Opening soon</b></div>
+            <div><span>Schedule</span><b id="schedule-state">To be announced</b></div>
+            <div><span>Qualifiers</span><b id="qualifiers-state">Coming soon</b></div>
+            <div><span>Final</span><b id="final-state">TBA</b></div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">ROAD TO THE TITLE</p><h2>From everyone to the final ten.</h2></div>
-          <a class="text-link" href="./schedule.html">Full schedule →</a>
-        </div>
-        <div class="stage-grid">
-          <article class="stage"><span>01</span><h3>First Qualifier</h3><p>Open to all participating teams.</p><b>→ Top 20</b></article>
-          <article class="stage"><span>02</span><h3>Quarterfinals</h3><p>Twenty teams fight for the next round.</p><b>→ Top 15</b></article>
-          <article class="stage"><span>03</span><h3>Semifinals</h3><p>Fifteen teams compete for a Final place.</p><b>→ Top 10</b></article>
-          <article class="stage final"><span>04</span><h3>UBWC Finals</h3><p>Ten teams. Three days. Nine battles.</p><b>→ World Champion</b></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section dark-section">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow">CHAMPIONSHIP FORMAT</p><h2>Every tournament. Three battles.</h2></div>
-        </div>
-        <div class="format-grid">
-          <div class="format-number">90<span>MIN</span></div>
-          <div class="format-copy"><h3>Battle 1</h3><p>Each UBWC tournament consists of three separate Lichess UltraBullet tournaments. Five to ten minutes of break time separate the battles.</p></div>
-          <div class="format-number">×3</div>
-          <div class="format-copy"><h3>One tournament</h3><p>The format is used for qualifiers, quarterfinals, semifinals and every day of the Finals.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container two-col">
-        <div>
-          <p class="eyebrow">TWO TITLES</p>
-          <h2>Team glory.<br>Individual greatness.</h2>
-          <p class="muted">The UBWC crowns both a Team World Champion and an Individual World Champion.</p>
-        </div>
-        <div class="title-cards">
-          <article class="title-card"><span>TEAM</span><h3>UBWC Team World Champion</h3><p>Team placement is the primary ranking criterion; the official Lichess score is used as the secondary criterion.</p></article>
-          <article class="title-card"><span>INDIVIDUAL</span><h3>Individual UBWC World Champion</h3><p>Only the official final Lichess score of one account per player is counted.</p></article>
+        <div class="future-grid">
+          <article><span>Qualifier</span><h3>Coming soon</h3><p id="qualifiers-message"></p></article>
+          <article><span>Registration</span><h3>Opening soon</h3><p id="registration-message"></p></article>
+          <article><span>Schedule</span><h3>TBA</h3><p id="schedule-message"></p></article>
+          <article><span>Standings</span><h3>Not active</h3><p id="standings-message"></p></article>
         </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="container footer-wrap"><div><strong>UBWC 2026</strong><span>Official UltraBullet World Championship</span></div><span>Built for the Lichess community</span></div></footer>
-  <script src="./js/app.js"></script>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>UBWC 2026</strong><span>UltraBullet World Championship</span></div>
+      <div><span>Preparation Phase</span><span>Official information hub</span></div>
+    </div>
+  </footer>
+  <script src="app.js"></script>
 </body>
 </html>
