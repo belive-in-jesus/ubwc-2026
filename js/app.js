@@ -4,7 +4,7 @@ const DEFAULT_CONFIG = {
     fullName: "UltraBullet World Championship",
     status: "preparation",
     statusLabel: "Preparation Phase",
-    description: "An international UltraBullet championship is currently being prepared."
+    description: "UBWC 2026 is currently in preparation."
   },
   visibility: {
     registrationOpen: false,
@@ -21,9 +21,16 @@ const DEFAULT_CONFIG = {
 
 async function loadConfig() {
   try {
-    const response = await fetch("data/config.json", { cache: "no-store" });
+    const response = await fetch("./data/config.json", { cache: "no-store" });
     if (!response.ok) throw new Error("Config unavailable");
-    return { ...DEFAULT_CONFIG, ...await response.json() };
+    const remote = await response.json();
+    return {
+      ...DEFAULT_CONFIG,
+      ...remote,
+      event: { ...DEFAULT_CONFIG.event, ...(remote.event || {}) },
+      visibility: { ...DEFAULT_CONFIG.visibility, ...(remote.visibility || {}) },
+      messages: { ...DEFAULT_CONFIG.messages, ...(remote.messages || {}) }
+    };
   } catch (error) {
     return DEFAULT_CONFIG;
   }
@@ -46,7 +53,7 @@ async function init() {
 
   setText("status-label", e.statusLabel);
   setText("hero-description", e.description);
-  setText("status-badge", e.statusLabel.toUpperCase());
+  setText("status-badge", (e.statusLabel || "Preparation Phase").toUpperCase());
   setText("status-title", e.status === "live" ? "The UBWC is live." : "The UBWC is currently being prepared.");
   setText("status-text", e.description);
 
@@ -60,22 +67,29 @@ async function init() {
   setText("qualifiers-message", m.qualifiers || "Qualifier information will appear here.");
   setText("standings-message", m.standings || "Live standings will become available when the competition starts.");
 
+  const menuButton = document.querySelector(".nav-toggle, .menu-toggle");
+  const nav = document.getElementById("main-nav") || document.getElementById("nav-links") || document.querySelector(".nav-wrap nav");
+  if (menuButton && nav && !menuButton.dataset.bound) {
+    menuButton.dataset.bound = "true";
+    menuButton.addEventListener("click", () => {
+      const open = nav.classList.toggle("open");
+      menuButton.setAttribute("aria-expanded", String(open));
+    });
+  }
+
   if (v.registrationOpen && config.links?.registration) {
-    const btn = document.createElement("a");
-    btn.className = "button primary";
-    btn.href = config.links.registration;
-    btn.target = "_blank";
-    btn.rel = "noopener";
-    btn.textContent = "Register";
-    document.querySelector(".hero-actions")?.appendChild(btn);
+    const container = document.querySelector(".hero-actions");
+    if (container && !container.querySelector("[data-registration-link]")) {
+      const btn = document.createElement("a");
+      btn.dataset.registrationLink = "true";
+      btn.className = "button primary";
+      btn.href = config.links.registration;
+      btn.target = "_blank";
+      btn.rel = "noopener";
+      btn.textContent = "Register";
+      container.appendChild(btn);
+    }
   }
 }
-
-document.querySelector(".menu-toggle")?.addEventListener("click", () => {
-  const btn = document.querySelector(".menu-toggle");
-  const nav = document.getElementById("nav-links");
-  const open = nav.classList.toggle("open");
-  btn.setAttribute("aria-expanded", String(open));
-});
 
 init();
