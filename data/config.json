@@ -4,7 +4,7 @@
     "fullName": "UltraBullet World Championship",
     "status": "preparation",
     "statusLabel": "Preparation Phase",
-    "description": "An international UltraBullet championship is currently being prepared. Official tournament dates, registration and qualification details will be announced once preparations are complete."
+    "description": "UBWC 2026 is currently in preparation. The organizers are working on the tournament structure and logistics before publishing dates and registration details."
   },
   "visibility": {
     "registrationOpen": false,
@@ -22,12 +22,12 @@
     "contact": ""
   },
   "messages": {
-    "registration": "Registration will open once the official event schedule has been published.",
-    "schedule": "The official tournament schedule has not been published yet.",
-    "qualifiers": "Qualifier information will appear here once the qualification stage is announced.",
+    "registration": "Registration details will be published after the schedule is confirmed.",
+    "schedule": "The event schedule is intentionally not fixed yet. Official dates will be announced when preparations are complete.",
+    "qualifiers": "Qualifier information and Lichess links will appear here once confirmed.",
     "players": "The participant list will be published after registration opens.",
-    "standings": "Live standings will become available when the competition starts.",
-    "results": "Results will be published during the competition.",
-    "final": "The final stage is currently being prepared."
+    "standings": "Standings will be activated when official tournament results are available.",
+    "results": "Official results will be published during the competition.",
+    "final": "The final stage is being prepared. The date has not been announced."
   }
 }
