@@ -4,7 +4,7 @@
     "fullName": "UltraBullet World Championship",
     "status": "preparation",
     "statusLabel": "Preparation Phase",
-    "description": "UBWC 2026 is currently in preparation. The organizers are working on the tournament structure and logistics before publishing dates and registration details."
+    "description": "UBWC 2026 is being prepared for the 2026/27 Christmas and New Year break. The current proposed event window is 26 December 2026 to 2 January 2027; dates remain subject to organizer confirmation."
   },
   "visibility": {
     "registrationOpen": false,
@@ -22,12 +22,12 @@
     "contact": ""
   },
   "messages": {
-    "registration": "Registration details will be published after the schedule is confirmed.",
-    "schedule": "The event schedule is intentionally not fixed yet. Official dates will be announced when preparations are complete.",
-    "qualifiers": "Qualifier information and Lichess links will appear here once confirmed.",
+    "registration": "The target registration period is 11–20 December 2026. Registration is not open; the period will be confirmed by the organizers.",
+    "schedule": "A proposed schedule for 26 December 2026 to 2 January 2027 is available. Final dates are subject to organizer confirmation.",
+    "qualifiers": "The open qualifier is provisionally planned for 26 December 2026. Tournament links will be published after confirmation.",
     "players": "The participant list will be published after registration opens.",
     "standings": "Standings will be activated when official tournament results are available.",
     "results": "Official results will be published during the competition.",
-    "final": "The final stage is being prepared. The date has not been announced."
+    "final": "The three-day final is provisionally planned for 29–30 December 2026 and 2 January 2027."
   }
 }
