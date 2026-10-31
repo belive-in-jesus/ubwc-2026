@@ -30,3 +30,6 @@ nav a{display:block}
   .nav-wrap{position:relative}
   .nav-wrap.open .nav-toggle{color:var(--accent)}
 }
+
+/* Small footer credit */
+.site-credit{margin-top:10px;text-align:center;font-size:.68rem;letter-spacing:.04em;color:#697381;opacity:.8}
