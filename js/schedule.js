@@ -57,13 +57,13 @@ if (list) {
 
     <article class="timeline-item">
       <div class="date"><small>FINAL · DAY 1</small>29<br>DEC 2026</div>
-      <div><h3>Championship final – first day</h3><p>The 10 finalist teams begin the three-day final series.</p></div>
+      <div><h3>Championship final – first day</h3><p>The 10 finalist teams begin the three-day final series. Each final day is planned to consist of three separate 90-minute Lichess UltraBullet Battles, with 5–10 minute breaks.</p></div>
       <div class="result">PROPOSED</div>
     </article>
 
     <article class="timeline-item">
       <div class="date"><small>FINAL · DAY 2</small>30<br>DEC 2026</div>
-      <div><h3>Championship final – second day</h3><p>Second day of the final series. Daily results contribute to the overall championship ranking.</p></div>
+      <div><h3>Championship final – second day</h3><p>Second day of the final series, with three separate 90-minute Battles planned. Daily results contribute to the overall championship ranking.</p></div>
       <div class="result">PROPOSED</div>
     </article>
 
@@ -75,7 +75,7 @@ if (list) {
 
     <article class="timeline-item">
       <div class="date"><small>FINAL · DAY 3</small>02<br>JAN 2027</div>
-      <div><h3>Championship final – final day</h3><p>Final tournament day, completion of the overall team ranking and determination of the UBWC Team Champion and Individual Champion.</p></div>
+      <div><h3>Championship final – final day</h3><p>Final day with three separate 90-minute Battles planned. The overall team ranking is completed and the UBWC Team Champion and Individual Champion are determined.</p></div>
       <div class="result">PROPOSED</div>
     </article>
   `;
